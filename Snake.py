@@ -44,8 +44,9 @@ def move():
     ontimer(move, 100)
 
 def movefood():
-    food.x += 10
-    ontimer(move, 1000)
+    food.x += randrange(-10,11,10)
+    food.y += randrange(-10,11,10)
+    ontimer(movefood, 50)
 
 setup(420, 420, 370, 0)
 hideturtle()
