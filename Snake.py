@@ -27,7 +27,8 @@ def move():
 
     snake.append(head)
 
-    if abs(head-food) < 10:
+    #if abs(head-food) < 10:
+    if head == food:
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
@@ -44,7 +45,8 @@ def move():
     ontimer(move, 100)
 
 def moveFood():
-    food.x+=1
+    food.x+=randrange(-10,11,10)
+    food.y+=randrange(-10,11,10)
     ontimer(moveFood,1000)
 
 setup(420, 420, 370, 0)
